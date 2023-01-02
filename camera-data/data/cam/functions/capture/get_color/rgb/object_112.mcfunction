@@ -1,0 +1,16 @@
+execute if score o= cam.main matches 112 run data modify storage cam:temp rgb set from storage cam:temp rgb.112
+execute if score o= cam.main matches 113 run data modify storage cam:temp rgb set from storage cam:temp rgb.113
+execute if score o= cam.main matches 114 run data modify storage cam:temp rgb set from storage cam:temp rgb.114
+execute if score o= cam.main matches 115 run data modify storage cam:temp rgb set from storage cam:temp rgb.115
+execute if score o= cam.main matches 116 run data modify storage cam:temp rgb set from storage cam:temp rgb.116
+execute if score o= cam.main matches 117 run data modify storage cam:temp rgb set from storage cam:temp rgb.117
+execute if score o= cam.main matches 118 run data modify storage cam:temp rgb set from storage cam:temp rgb.118
+execute if score o= cam.main matches 119 run data modify storage cam:temp rgb set from storage cam:temp rgb.119
+execute if score o= cam.main matches 120 run data modify storage cam:temp rgb set from storage cam:temp rgb.120
+execute if score o= cam.main matches 121 run data modify storage cam:temp rgb set from storage cam:temp rgb.121
+execute if score o= cam.main matches 122 run data modify storage cam:temp rgb set from storage cam:temp rgb.122
+execute if score o= cam.main matches 123 run data modify storage cam:temp rgb set from storage cam:temp rgb.123
+execute if score o= cam.main matches 124 run data modify storage cam:temp rgb set from storage cam:temp rgb.124
+execute if score o= cam.main matches 125 run data modify storage cam:temp rgb set from storage cam:temp rgb.125
+execute if score o= cam.main matches 126 run data modify storage cam:temp rgb set from storage cam:temp rgb.126
+execute if score o= cam.main matches 127 run data modify storage cam:temp rgb set from storage cam:temp rgb.127

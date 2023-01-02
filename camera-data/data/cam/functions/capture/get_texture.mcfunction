@@ -10,28 +10,66 @@ scoreboard players operation zpos= cam.main %= #16 cam.main
 
 #determining face based on coordinate
 ##1 - top +y
-execute if score ypos= cam.main matches 14.. run scoreboard players set face= cam.main 1
+execute if score ypos= cam.main matches 15.. run scoreboard players set face= cam.main 1
 ##6 - bottom -y
-execute if score ypos= cam.main matches ..1 run scoreboard players set face= cam.main 6
+execute if score ypos= cam.main matches ..0 run scoreboard players set face= cam.main 6
 
 ##2 - north -z
-execute if score zpos= cam.main matches ..1 run scoreboard players set face= cam.main 2
+execute if score zpos= cam.main matches ..0 run scoreboard players set face= cam.main 2
 ##3 - south +z
-execute if score zpos= cam.main matches 14.. run scoreboard players set face= cam.main 3
+execute if score zpos= cam.main matches 15.. run scoreboard players set face= cam.main 3
 
 ##4 - west -x
-execute if score xpos= cam.main matches ..1 run scoreboard players set face= cam.main 4
+execute if score xpos= cam.main matches ..0 run scoreboard players set face= cam.main 4
 ##5 - east +x
-execute if score xpos= cam.main matches 14.. run scoreboard players set face= cam.main 5
+execute if score xpos= cam.main matches 15.. run scoreboard players set face= cam.main 5
 
-#running functions to get textures
-data modify storage cam:main line append value ['{"text":"","color":"#FF00FF"}']
-execute if block ~ ~ ~ #dirt run data modify storage cam:main line[-1] set value ['{"text":"","color":"#694931"}']
-execute if block ~ ~ ~ grass_block if score ypos= cam.main matches 12.. run data modify storage cam:main line[-1] set value ['{"text":"","color":"#7CC342"}']
-execute if block ~ ~ ~ #base_stone_overworld run data modify storage cam:main line[-1] set value ['{"text":"","color":"#747474"}']
-execute if block ~ ~ ~ #logs run data modify storage cam:main line[-1] set value ['{"text":"","color":"#745A36"}']
-execute if block ~ ~ ~ #leaves run data modify storage cam:main line[-1] set value ['{"text":"","color":"#1FBE02"}']
-execute if block ~ ~ ~ gravel run data modify storage cam:main line[-1] set value ['{"text":"","color":"#726B69"}']
-execute if block ~ ~ ~ sand run data modify storage cam:main line[-1] set value ['{"text":"","color":"#DCCFA3"}']
-execute if block ~ ~ ~ water run data modify storage cam:main line[-1] set value ['{"text":"","color":"#3F76E4"}']
-execute if block ~ ~ ~ lava run data modify storage cam:main line[-1] set value ['{"text":"","color":"#D75E12"}']
+#running functions to get colors
+data modify storage cam:main color set value {r:255,g:0,b:255}
+execute if block ~ ~ ~ #dirt run data modify storage cam:main color set value {r:105,g:73,b:49}
+execute if block ~ ~ ~ grass_block if score ypos= cam.main matches 12.. run data modify storage cam:main color set value {r:124,g:195,b:66}
+execute if block ~ ~ ~ #base_stone_overworld run data modify storage cam:main color set value {r:116,g:116,b:116}
+execute if block ~ ~ ~ #logs run data modify storage cam:main color set value {r:116,g:90,b:54}
+execute if block ~ ~ ~ #leaves run data modify storage cam:main color set value {r:31,g:190,b:2}
+execute if block ~ ~ ~ gravel run data modify storage cam:main color set value {r:114,g:107,b:105}
+execute if block ~ ~ ~ sand run data modify storage cam:main color set value {r:220,g:207,b:163}
+execute if block ~ ~ ~ water run data modify storage cam:main color set value {r:63,g:118,b:228}
+execute if block ~ ~ ~ lava run data modify storage cam:main color set value {r:215,g:94,b:18}
+
+#running shading operations
+##face brigtness
+scoreboard players set darken= cam.main 100
+execute if score face= cam.main matches 2..3 run scoreboard players set darken= cam.main 62
+execute if score face= cam.main matches 4..5 run scoreboard players set darken= cam.main 80
+execute if score face= cam.main matches 6 run scoreboard players set darken= cam.main 50
+##getting block light
+scoreboard players set light= cam.main 16
+execute positioned ^ ^ ^-0.1 if predicate cam:light_00 run scoreboard players set light= cam.main 01
+execute positioned ^ ^ ^-0.1 if predicate cam:light_01 run scoreboard players set light= cam.main 02
+execute positioned ^ ^ ^-0.1 if predicate cam:light_02 run scoreboard players set light= cam.main 03
+execute positioned ^ ^ ^-0.1 if predicate cam:light_03 run scoreboard players set light= cam.main 04
+execute positioned ^ ^ ^-0.1 if predicate cam:light_04 run scoreboard players set light= cam.main 05
+execute positioned ^ ^ ^-0.1 if predicate cam:light_05 run scoreboard players set light= cam.main 06
+execute positioned ^ ^ ^-0.1 if predicate cam:light_06 run scoreboard players set light= cam.main 07
+execute positioned ^ ^ ^-0.1 if predicate cam:light_07 run scoreboard players set light= cam.main 08
+execute positioned ^ ^ ^-0.1 if predicate cam:light_08 run scoreboard players set light= cam.main 09
+execute positioned ^ ^ ^-0.1 if predicate cam:light_09 run scoreboard players set light= cam.main 10
+execute positioned ^ ^ ^-0.1 if predicate cam:light_10 run scoreboard players set light= cam.main 11
+execute positioned ^ ^ ^-0.1 if predicate cam:light_11 run scoreboard players set light= cam.main 12
+execute positioned ^ ^ ^-0.1 if predicate cam:light_12 run scoreboard players set light= cam.main 13
+execute positioned ^ ^ ^-0.1 if predicate cam:light_13 run scoreboard players set light= cam.main 14
+execute positioned ^ ^ ^-0.1 if predicate cam:light_14 run scoreboard players set light= cam.main 15
+execute positioned ^ ^ ^-0.1 if predicate cam:light_15 run scoreboard players set light= cam.main 16
+
+scoreboard players operation darken= cam.main *= light= cam.main
+scoreboard players operation darken= cam.main /= #16 cam.main
+##applying shading
+execute store result score color= cam.main run data get storage cam:main color.r
+execute store result storage cam:main color.r int 0.01 run scoreboard players operation color= cam.main *= darken= cam.main
+execute store result score color= cam.main run data get storage cam:main color.g
+execute store result storage cam:main color.g int 0.01 run scoreboard players operation color= cam.main *= darken= cam.main
+execute store result score color= cam.main run data get storage cam:main color.b
+execute store result storage cam:main color.b int 0.01 run scoreboard players operation color= cam.main *= darken= cam.main
+
+#converting specified color values into rgb string
+execute in cam:resolve run function cam:capture/get_color

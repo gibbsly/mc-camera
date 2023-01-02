@@ -1,0 +1,18 @@
+{
+	"type": "cam:resolve",
+	"generator": {
+		"type": "minecraft:flat",
+		"settings": {
+			"biome": "cam:space",
+			"lakes": false,
+			"features": false,
+			"layers": [
+				{
+					"block": "minecraft:air",
+					"height": 1
+				}
+			],
+			"structure_overrides": []
+		}
+	}
+}

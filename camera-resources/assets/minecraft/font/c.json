@@ -1,9 +1,0 @@
-{
-	"providers": [
-		{ "type": "bitmap", "file": "empty.png", "ascent": -32768, "height": -8, "chars": [","] },
-		{ "type": "bitmap", "file": "empty.png", "ascent": -32768, "height": 0, "chars": ["\uEFCD"] },
-		{ "type": "bitmap", "file": "empty.png", "ascent": -32768, "height": -2, "chars": ["\uEFCE"] },
-		{ "type": "bitmap", "file": "empty.png", "ascent": -32768, "height": 1, "chars": ["\uEFCF"] },
-		{ "type": "bitmap", "file": "cam:pixels.png", "ascent": 8, "height": 10, "chars": ["0123456789","          "] }
-	]
-}

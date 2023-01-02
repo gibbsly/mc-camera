@@ -1,5 +1,7 @@
 #moving plane entity
-execute rotated as 0-0-0-0-63616D positioned as 0-0-0-0-63616D run tp 0-0-0-0-63616E ^-0.495 ^-0.495 ^-0.75
+execute rotated as 0-0-0-0-63616D positioned as 0-0-0-0-63616D run tp 0-0-0-0-63616E ^-0.495 ^-0.495 ^-0.5
+
+#(last coordinate determines fov - 75 was old)
 
 #storage setup
 data modify storage cam:main image set value []

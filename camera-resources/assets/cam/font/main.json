@@ -1,12 +1,22 @@
 {
 	"providers": [
-		{ "type": "bitmap", "file": "empty.png", "ascent": -32768, "height": -101, "chars": [","] },
-		{ "type": "bitmap", "file": "empty.png", "ascent": -32768, "height": -101, "chars": ["\uEFCD"] },
-		{ "type": "bitmap", "file": "empty.png", "ascent": -32768, "height": -101, "chars": ["\uEFCE"] },
-		{ "type": "bitmap", "file": "empty.png", "ascent": -32768, "height": 1, "chars": ["\uEFCF"] },
-		{ "type": "bitmap", "file": "cam:pixels99.png", "ascent": 8, "height": 99, "chars": [
-			"!#$%&()*+╞-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~╛┐└┴┬├─┼",
-			"                                                                                                   "
-		] }
+		{
+            "type": "space",
+            "advances": {
+                ",": -99,
+                "\uEFCD": -99,
+                "\uEFCE": -99,
+                "\uEFCF": 2
+            }
+        },
+		{ 
+			"type": "bitmap", 
+			"file": "cam:pixels99.png", 
+			"ascent": 8, 
+			"height": 99, 
+			"chars": [
+				"!#$%&()*+╞-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~╛┐└┴┬├─┼"
+			] 
+		}
 	]
 }

@@ -9,20 +9,31 @@ scoreboard players operation ypos= cam.main %= #16 cam.main
 scoreboard players operation zpos= cam.main %= #16 cam.main
 
 #determining face based on coordinate
+scoreboard players operation pface= cam.main = face= cam.main
+scoreboard players set ft= cam.main 0
 ##1 - top +y
 execute if score ypos= cam.main matches 15.. run scoreboard players set face= cam.main 1
+execute if score ypos= cam.main matches 15.. run scoreboard players add ft= cam.main 1
 ##6 - bottom -y
 execute if score ypos= cam.main matches ..0 run scoreboard players set face= cam.main 6
+execute if score ypos= cam.main matches ..0 run scoreboard players add ft= cam.main 1
 
 ##2 - north -z
 execute if score zpos= cam.main matches ..0 run scoreboard players set face= cam.main 2
+execute if score zpos= cam.main matches ..0 run scoreboard players add ft= cam.main 1
 ##3 - south +z
 execute if score zpos= cam.main matches 15.. run scoreboard players set face= cam.main 3
+execute if score zpos= cam.main matches 15.. run scoreboard players add ft= cam.main 1
 
 ##4 - west -x
 execute if score xpos= cam.main matches ..0 run scoreboard players set face= cam.main 4
+execute if score xpos= cam.main matches ..0 run scoreboard players add ft= cam.main 1
 ##5 - east +x
 execute if score xpos= cam.main matches 15.. run scoreboard players set face= cam.main 5
+execute if score xpos= cam.main matches 15.. run scoreboard players add ft= cam.main 1
+
+##reverting to previous face if face is ambiguous 
+execute unless score ft= cam.main matches 1 run scoreboard players operation face= cam.main = pface= cam.main
 
 #running functions to get colors
 data modify storage cam:main color set value {r:255,g:0,b:255}

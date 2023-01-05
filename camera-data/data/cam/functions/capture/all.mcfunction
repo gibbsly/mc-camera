@@ -1,5 +1,7 @@
 #capturing line
 scoreboard players set rays= cam.main 0
+scoreboard players set pface= cam.main -1
+scoreboard players set pwface= cam.main -1
 data modify storage cam:main line set value []
 
 function cam:capture/line

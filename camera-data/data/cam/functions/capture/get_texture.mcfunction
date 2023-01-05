@@ -33,7 +33,7 @@ execute if score xpos= cam.main matches 15.. run scoreboard players set face= ca
 execute if score xpos= cam.main matches 15.. run scoreboard players add ft= cam.main 1
 
 ##reverting to previous face if face is ambiguous 
-execute unless score ft= cam.main matches 1 run scoreboard players operation face= cam.main = pface= cam.main
+execute unless score ft= cam.main matches 1 unless score pface= cam.main matches -1 run scoreboard players operation face= cam.main = pface= cam.main
 
 #running functions to get colors
 data modify storage cam:main color set value {r:255,g:0,b:255}

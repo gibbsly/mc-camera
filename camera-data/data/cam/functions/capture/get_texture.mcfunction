@@ -82,5 +82,8 @@ execute store result storage cam:main color.g int 0.01 run scoreboard players op
 execute store result score color= cam.main run data get storage cam:main color.b
 execute store result storage cam:main color.b int 0.01 run scoreboard players operation color= cam.main *= darken= cam.main
 
+##applying water if set
+execute if score water= cam.main matches 1 run function cam:capture/apply_water
+
 #converting specified color values into rgb string
 execute in cam:resolve run function cam:capture/get_color

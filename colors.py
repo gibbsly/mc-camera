@@ -4,12 +4,12 @@ from functools import reduce
 
 all_images = glob.glob("*.png")
 for img in all_images:
-	# Load the image
-	img = Image.open(img).convert('RGB')
+	path = img
+	img = Image.open(path).convert('RGB')
 	pixels = img.load() 
 	width, height = img.size
-	print(all_images[0])
-	function_name = ("output/",all_images[0].replace('.png', '.mcfunction'))
+	print(path)
+	function_name = ("output/",path.replace('.png', '.mcfunction'))
 	function_name = reduce(lambda x, y: f"{x}{y}" if x != "" else y, function_name)
 	for y in range(height):
 		color_objects = ["["]

@@ -6,7 +6,7 @@ data modify storage cam:main line set value []
 
 function cam:capture/line
 
-data modify storage cam:main image append from storage cam:main line
+data modify storage cam:main colors append from storage cam:main line
 
 #loop
 scoreboard players add lines= cam.main 1

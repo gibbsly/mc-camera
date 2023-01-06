@@ -2,9 +2,6 @@ execute store result score r= cam.main run data get storage cam:main color.r
 execute store result score g= cam.main run data get storage cam:main color.g
 execute store result score b= cam.main run data get storage cam:main color.b
 
-scoreboard players operation rx= cam.main %= #16 cam.main
-scoreboard players operation rz= cam.main /= #16 cam.main
-
 scoreboard players operation o= cam.main = r= cam.main
 execute if score o= cam.main matches 000..015 run function cam:capture/get_color/rgb/object_000
 execute if score o= cam.main matches 016..031 run function cam:capture/get_color/rgb/object_016
@@ -62,3 +59,10 @@ execute if score o= cam.main matches 240..255 run function cam:capture/get_color
 data modify storage cam:temp array set value []
 data modify storage cam:temp array append from storage cam:temp rgb
 data modify storage cam:main line append from storage cam:temp array
+
+data modify storage cam:main new_color set value {color:{},rgb:{},selected:1b}
+data modify storage cam:main new_color.color set from storage cam:main color
+data modify storage cam:main new_color.rgb set from storage cam:temp rgb
+data modify storage cam:main color_cashe append from storage cam:main new_color
+scoreboard players add cashed_colors= cam.main 1
+bossbar set cam:prog name ["generating colors ",[{"nbt":"rgb","storage":"cam:temp","interpret":true},"█"]," (",{"score":{"name":"cashed_colors=","objective":"cam.main"}},")"]

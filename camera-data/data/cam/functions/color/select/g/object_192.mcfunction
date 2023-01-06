@@ -1,0 +1,16 @@
+execute if score o= cam.main matches 192 if data storage cam:main color_cashe[{color:{g:192},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:192},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 193 if data storage cam:main color_cashe[{color:{g:193},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:193},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 194 if data storage cam:main color_cashe[{color:{g:194},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:194},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 195 if data storage cam:main color_cashe[{color:{g:195},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:195},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 196 if data storage cam:main color_cashe[{color:{g:196},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:196},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 197 if data storage cam:main color_cashe[{color:{g:197},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:197},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 198 if data storage cam:main color_cashe[{color:{g:198},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:198},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 199 if data storage cam:main color_cashe[{color:{g:199},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:199},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 200 if data storage cam:main color_cashe[{color:{g:200},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:200},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 201 if data storage cam:main color_cashe[{color:{g:201},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:201},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 202 if data storage cam:main color_cashe[{color:{g:202},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:202},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 203 if data storage cam:main color_cashe[{color:{g:203},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:203},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 204 if data storage cam:main color_cashe[{color:{g:204},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:204},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 205 if data storage cam:main color_cashe[{color:{g:205},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:205},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 206 if data storage cam:main color_cashe[{color:{g:206},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:206},selected:10b}].selected set value 20b
+execute if score o= cam.main matches 207 if data storage cam:main color_cashe[{color:{g:207},selected:10b}] run data modify storage cam:main color_cashe[{color:{g:207},selected:10b}].selected set value 20b

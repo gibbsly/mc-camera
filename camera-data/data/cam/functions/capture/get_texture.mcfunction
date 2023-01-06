@@ -1,19 +1,22 @@
 #getting pos in block as texture coordinates
 tp 0-0-0-0-63616F ~ ~ ~ 
+execute positioned ^ ^ ^-0.015625 if block ~ ~ ~ #cam:capture run tp 0-0-0-0-63616F ~ ~ ~ 
+execute positioned ^ ^ ^-0.031250 if block ~ ~ ~ #cam:capture run tp 0-0-0-0-63616F ~ ~ ~ 
+execute positioned ^ ^ ^-0.046875 if block ~ ~ ~ #cam:capture run tp 0-0-0-0-63616F ~ ~ ~ 
 data modify storage cam:main pos set from entity 0-0-0-0-63616F Pos
-execute store result score xpos= cam.main run data get storage cam:main pos[0] 16
-execute store result score ypos= cam.main run data get storage cam:main pos[1] 16
-execute store result score zpos= cam.main run data get storage cam:main pos[2] 16
-scoreboard players operation xpos= cam.main %= #16 cam.main
-scoreboard players operation ypos= cam.main %= #16 cam.main
-scoreboard players operation zpos= cam.main %= #16 cam.main
+execute store result score xpos= cam.main run data get storage cam:main pos[0] 64
+execute store result score ypos= cam.main run data get storage cam:main pos[1] 64
+execute store result score zpos= cam.main run data get storage cam:main pos[2] 64
+scoreboard players operation xpos= cam.main %= #64 cam.main
+scoreboard players operation ypos= cam.main %= #64 cam.main
+scoreboard players operation zpos= cam.main %= #64 cam.main
 
 #determining face based on coordinate
 scoreboard players operation pface= cam.main = face= cam.main
 scoreboard players set ft= cam.main 0
 ##1 - top +y
-execute if score ypos= cam.main matches 15.. run scoreboard players set face= cam.main 1
-execute if score ypos= cam.main matches 15.. run scoreboard players add ft= cam.main 1
+execute if score ypos= cam.main matches 63.. run scoreboard players set face= cam.main 1
+execute if score ypos= cam.main matches 63.. run scoreboard players add ft= cam.main 1
 ##6 - bottom -y
 execute if score ypos= cam.main matches ..0 run scoreboard players set face= cam.main 6
 execute if score ypos= cam.main matches ..0 run scoreboard players add ft= cam.main 1
@@ -22,32 +25,43 @@ execute if score ypos= cam.main matches ..0 run scoreboard players add ft= cam.m
 execute if score zpos= cam.main matches ..0 run scoreboard players set face= cam.main 2
 execute if score zpos= cam.main matches ..0 run scoreboard players add ft= cam.main 1
 ##3 - south +z
-execute if score zpos= cam.main matches 15.. run scoreboard players set face= cam.main 3
-execute if score zpos= cam.main matches 15.. run scoreboard players add ft= cam.main 1
+execute if score zpos= cam.main matches 63.. run scoreboard players set face= cam.main 3
+execute if score zpos= cam.main matches 63.. run scoreboard players add ft= cam.main 1
 
 ##4 - west -x
 execute if score xpos= cam.main matches ..0 run scoreboard players set face= cam.main 4
 execute if score xpos= cam.main matches ..0 run scoreboard players add ft= cam.main 1
 ##5 - east +x
-execute if score xpos= cam.main matches 15.. run scoreboard players set face= cam.main 5
-execute if score xpos= cam.main matches 15.. run scoreboard players add ft= cam.main 1
+execute if score xpos= cam.main matches 63.. run scoreboard players set face= cam.main 5
+execute if score xpos= cam.main matches 63.. run scoreboard players add ft= cam.main 1
 
 ##reverting to previous face if face is ambiguous 
 execute unless score ft= cam.main matches 1 unless score pface= cam.main matches -1 run scoreboard players operation face= cam.main = pface= cam.main
 
+#getting uv coordinates
+execute unless score face= cam.main matches 2..5 run scoreboard players operation u= cam.main = xpos= cam.main
+execute unless score face= cam.main matches 2..5 run scoreboard players operation v= cam.main = zpos= cam.main
+
+execute if score face= cam.main matches 2..5 run scoreboard players operation v= cam.main = ypos= cam.main
+execute if score face= cam.main matches 2..3 run scoreboard players operation u= cam.main = xpos= cam.main
+execute if score face= cam.main matches 4..5 run scoreboard players operation u= cam.main = zpos= cam.main
+
+scoreboard players operation u= cam.main /= #4 cam.main
+scoreboard players operation v= cam.main /= #4 cam.main
+scoreboard players remove v= cam.main 15
+scoreboard players operation v= cam.main *= #-1 cam.main
+scoreboard players operation v= cam.main >< u= cam.main
+
 #running functions to get colors
 data modify storage cam:main color set value {r:255,g:0,b:255}
-execute if block ~ ~ ~ #dirt run data modify storage cam:main color set value {r:105,g:73,b:49}
-execute if block ~ ~ ~ grass_block if score ypos= cam.main matches 12.. run data modify storage cam:main color set value {r:124,g:195,b:66}
-execute if block ~ ~ ~ #base_stone_overworld run data modify storage cam:main color set value {r:116,g:116,b:116}
-execute if block ~ ~ ~ #logs run data modify storage cam:main color set value {r:116,g:90,b:54}
-execute if block ~ ~ ~ #leaves run data modify storage cam:main color set value {r:31,g:190,b:2}
-execute if block ~ ~ ~ gravel run data modify storage cam:main color set value {r:114,g:107,b:105}
-execute if block ~ ~ ~ sand run data modify storage cam:main color set value {r:220,g:207,b:163}
-execute if block ~ ~ ~ water run data modify storage cam:main color set value {r:63,g:118,b:228}
-execute if block ~ ~ ~ lava run data modify storage cam:main color set value {r:215,g:94,b:18}
+execute positioned as 0-0-0-0-63616F run function cam:capture/block_textures
 
 #running shading operations
+##applying tint if specified
+execute if data storage cam:main color{tint:1} run function cam:capture/apply_grass_tint
+execute if data storage cam:main color{tint:2} run function cam:capture/apply_leaf_tint
+
+
 ##face brigtness
 scoreboard players set darken= cam.main 100
 execute if score face= cam.main matches 2..3 run scoreboard players set darken= cam.main 62

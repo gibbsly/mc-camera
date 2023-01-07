@@ -52,6 +52,13 @@ scoreboard players remove v= cam.main 15
 scoreboard players operation v= cam.main *= #-1 cam.main
 scoreboard players operation v= cam.main >< u= cam.main
 
+#aplying mipmapping
+scoreboard players operation rd= cam.main /= #16 cam.main
+execute if score rd= cam.main matches 8..15 run function cam:capture/mip/1
+execute if score rd= cam.main matches 16..31 run function cam:capture/mip/2
+execute if score rd= cam.main matches 32..63 run function cam:capture/mip/3
+execute if score rd= cam.main matches 64.. run function cam:capture/mip/4
+
 #running functions to get colors
 data modify storage cam:main color set value {r:255,g:0,b:255}
 execute positioned as 0-0-0-0-63616F run function cam:capture/block_textures

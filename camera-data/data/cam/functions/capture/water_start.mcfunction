@@ -55,6 +55,13 @@ scoreboard players remove v= cam.main 15
 scoreboard players operation v= cam.main *= #-1 cam.main
 scoreboard players operation v= cam.main >< u= cam.main
 
+#aplying mipmapping
+scoreboard players operation rd= cam.main /= #16 cam.main
+execute if score rd= cam.main matches 8..15 run function cam:capture/mip/1
+execute if score rd= cam.main matches 16..31 run function cam:capture/mip/2
+execute if score rd= cam.main matches 32..63 run function cam:capture/mip/3
+execute if score rd= cam.main matches 64.. run function cam:capture/mip/4
+
 execute positioned ^ ^ ^-0.1 if predicate cam:light_00 run scoreboard players set water_light= cam.main 01
 execute positioned ^ ^ ^-0.1 if predicate cam:light_01 run scoreboard players set water_light= cam.main 02
 execute positioned ^ ^ ^-0.1 if predicate cam:light_02 run scoreboard players set water_light= cam.main 03

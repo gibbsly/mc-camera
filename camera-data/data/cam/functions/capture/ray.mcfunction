@@ -1,4 +1,4 @@
-scoreboard players add dist= cam.main 1
+execute store result score rd= cam.main run scoreboard players add dist= cam.main 1
 
 execute store success score block= cam.main if block ~ ~ ~ #cam:capture
 execute if score water= cam.main matches 0 if block ~ ~0.125 ~ water run function cam:capture/water_start

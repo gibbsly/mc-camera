@@ -8,6 +8,7 @@ scoreboard players set #8 cam.main 8
 scoreboard players set #16 cam.main 16
 scoreboard players set #63 cam.main 63
 scoreboard players set #64 cam.main 64
+scoreboard players set #128 cam.main 128
 bossbar add cam:prog ""
 bossbar set cam:prog max 19612
 

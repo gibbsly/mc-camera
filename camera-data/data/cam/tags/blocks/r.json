@@ -1,0 +1,23 @@
+{
+	"values": [
+		"minecraft:raw_copper_block",
+		"minecraft:raw_gold_block",
+		"minecraft:raw_iron_block",
+		"minecraft:red_concrete",
+		"minecraft:red_concrete_powder",
+		"minecraft:red_glazed_terracotta",
+		"minecraft:red_mushroom_block",
+		"minecraft:red_nether_bricks",
+		"minecraft:red_sand",
+		"minecraft:red_sandstone",
+		"minecraft:red_stained_glass",
+		"minecraft:red_terracotta",
+		"minecraft:red_wool",
+		"minecraft:redstone_block",
+		"minecraft:redstone_lamp",
+		"minecraft:redstone_ore",
+		"minecraft:reinforced_deepslate",
+		"minecraft:repeating_command_block",
+		"minecraft:respawn_anchor"
+	]
+}

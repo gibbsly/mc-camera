@@ -1,0 +1,24 @@
+{
+	"values": [
+		"minecraft:gilded_blackstone",
+		"minecraft:glass",
+		"minecraft:glowstone",
+		"minecraft:gold_block",
+		"minecraft:gold_ore",
+		"minecraft:granite",
+		"minecraft:grass_block",
+		"minecraft:gravel",
+		"minecraft:gray_concrete",
+		"minecraft:gray_concrete_powder",
+		"minecraft:gray_glazed_terracotta",
+		"minecraft:gray_stained_glass",
+		"minecraft:gray_terracotta",
+		"minecraft:gray_wool",
+		"minecraft:green_concrete",
+		"minecraft:green_concrete_powder",
+		"minecraft:green_glazed_terracotta",
+		"minecraft:green_stained_glass",
+		"minecraft:green_terracotta",
+		"minecraft:green_wool"
+	]
+}

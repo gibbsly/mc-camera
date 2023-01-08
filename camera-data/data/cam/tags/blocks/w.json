@@ -1,0 +1,28 @@
+{
+	"values": [
+		"minecraft:warped_hyphae",
+		"minecraft:warped_nylium",
+		"minecraft:warped_planks",
+		"minecraft:warped_stem",
+		"minecraft:warped_wart_block",
+		"minecraft:waxed_copper_block",
+		"minecraft:waxed_cut_copper",
+		"minecraft:waxed_cut_copper_slab",
+		"minecraft:waxed_cut_copper_stairs",
+		"minecraft:waxed_exposed_copper",
+		"minecraft:waxed_exposed_cut_copper",
+		"minecraft:waxed_oxidized_copper",
+		"minecraft:waxed_oxidized_cut_copper",
+		"minecraft:waxed_weathered_copper",
+		"minecraft:waxed_weathered_cut_copper",
+		"minecraft:weathered_copper",
+		"minecraft:weathered_cut_copper",
+		"minecraft:wet_sponge",
+		"minecraft:white_concrete",
+		"minecraft:white_concrete_powder",
+		"minecraft:white_glazed_terracotta",
+		"minecraft:white_stained_glass",
+		"minecraft:white_terracotta",
+		"minecraft:white_wool"
+	]
+}

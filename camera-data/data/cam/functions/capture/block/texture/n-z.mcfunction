@@ -1,0 +1,13 @@
+execute if block ~ ~ ~ #cam:n run function cam:capture/block/texture/n
+execute if block ~ ~ ~ #cam:o run function cam:capture/block/texture/o
+execute if block ~ ~ ~ #cam:p run function cam:capture/block/texture/p
+execute if block ~ ~ ~ #cam:q run function cam:capture/block/texture/q
+execute if block ~ ~ ~ #cam:r run function cam:capture/block/texture/r
+execute if block ~ ~ ~ #cam:s run function cam:capture/block/texture/s
+execute if block ~ ~ ~ #cam:t run function cam:capture/block/texture/t
+#execute if block ~ ~ ~ #cam:u run function cam:capture/block/texture/u
+execute if block ~ ~ ~ #cam:v run function cam:capture/block/texture/v
+execute if block ~ ~ ~ #cam:w run function cam:capture/block/texture/w
+#execute if block ~ ~ ~ #cam:x run function cam:capture/block/texture/x
+execute if block ~ ~ ~ #cam:y run function cam:capture/block/texture/y
+#execute if block ~ ~ ~ #cam:z run function cam:capture/block/texture/z

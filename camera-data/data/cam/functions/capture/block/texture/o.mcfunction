@@ -1,0 +1,15 @@
+execute if block ~ ~ ~ oak_leaves run function cam:capture/block/texture/oak_leaves
+execute if block ~ ~ ~ oak_log run function cam:capture/block/texture/oak_log
+execute if block ~ ~ ~ oak_planks run function cam:capture/block/texture/oak_planks
+execute if block ~ ~ ~ oak_wood run function cam:capture/block/texture/oak_wood
+execute if block ~ ~ ~ observer run function cam:capture/block/texture/observer
+execute if block ~ ~ ~ obsidian run function cam:capture/block/texture/obsidian
+execute if block ~ ~ ~ ochre_froglight run function cam:capture/block/texture/ochre_froglight
+execute if block ~ ~ ~ orange_concrete run function cam:capture/block/texture/orange_concrete
+execute if block ~ ~ ~ orange_concrete_powder run function cam:capture/block/texture/orange_concrete_powder
+execute if block ~ ~ ~ orange_glazed_terracotta run function cam:capture/block/texture/orange_glazed_terracotta
+execute if block ~ ~ ~ orange_stained_glass run function cam:capture/block/texture/orange_stained_glass
+execute if block ~ ~ ~ orange_terracotta run function cam:capture/block/texture/orange_terracotta
+execute if block ~ ~ ~ orange_wool run function cam:capture/block/texture/orange_wool
+execute if block ~ ~ ~ oxidized_copper run function cam:capture/block/texture/oxidized_copper
+execute if block ~ ~ ~ oxidized_cut_copper run function cam:capture/block/texture/oxidized_cut_copper

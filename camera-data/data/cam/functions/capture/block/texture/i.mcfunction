@@ -1,0 +1,9 @@
+execute if block ~ ~ ~ ice run function cam:capture/block/texture/ice
+execute if block ~ ~ ~ infested_chiseled_stone_bricks run function cam:capture/block/texture/infested_chiseled_stone_bricks
+execute if block ~ ~ ~ infested_cobblestone run function cam:capture/block/texture/infested_cobblestone
+execute if block ~ ~ ~ infested_cracked_stone_bricks run function cam:capture/block/texture/infested_cracked_stone_bricks
+execute if block ~ ~ ~ infested_mossy_stone_bricks run function cam:capture/block/texture/infested_mossy_stone_bricks
+execute if block ~ ~ ~ infested_stone run function cam:capture/block/texture/infested_stone
+execute if block ~ ~ ~ infested_stone_bricks run function cam:capture/block/texture/infested_stone_bricks
+execute if block ~ ~ ~ iron_block run function cam:capture/block/texture/iron_block
+execute if block ~ ~ ~ iron_ore run function cam:capture/block/texture/iron_ore

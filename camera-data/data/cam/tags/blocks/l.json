@@ -1,0 +1,27 @@
+{
+	"values": [
+		"minecraft:lapis_block",
+		"minecraft:lapis_ore",
+		"minecraft:lava",
+		"minecraft:light_blue_concrete",
+		"minecraft:light_blue_concrete_powder",
+		"minecraft:light_blue_glazed_terracotta",
+		"minecraft:light_blue_stained_glass",
+		"minecraft:light_blue_terracotta",
+		"minecraft:light_blue_wool",
+		"minecraft:light_gray_concrete",
+		"minecraft:light_gray_concrete_powder",
+		"minecraft:light_gray_glazed_terracotta",
+		"minecraft:light_gray_stained_glass",
+		"minecraft:light_gray_terracotta",
+		"minecraft:light_gray_wool",
+		"minecraft:lime_concrete",
+		"minecraft:lime_concrete_powder",
+		"minecraft:lime_glazed_terracotta",
+		"minecraft:lime_stained_glass",
+		"minecraft:lime_terracotta",
+		"minecraft:lime_wool",
+		"minecraft:lodestone",
+		"minecraft:loom"
+	]
+}

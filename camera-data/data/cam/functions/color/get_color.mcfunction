@@ -56,9 +56,7 @@ execute if score o= cam.main matches 208..223 run function cam:capture/get_color
 execute if score o= cam.main matches 224..239 run function cam:capture/get_color/object_224
 execute if score o= cam.main matches 240..255 run function cam:capture/get_color/object_240
 
-data modify storage cam:temp array set value []
-data modify storage cam:temp array append from storage cam:temp rgb
-data modify storage cam:main line append from storage cam:temp array
+data modify storage cam:main line append from storage cam:temp rgb
 
 data modify storage cam:main new_color set value {color:{},rgb:{},selected:1b}
 data modify storage cam:main new_color.color set from storage cam:main color

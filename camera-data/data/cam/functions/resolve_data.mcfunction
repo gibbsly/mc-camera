@@ -1,4 +1,2 @@
-function cam:resolve/sign
+function cam:resolve/sign_raw
 execute store result bossbar cam:prog value run scoreboard players add total= cam.main 10
-data remove storage cam:main image[0]
-execute if data storage cam:main image[0] run function cam:resolve_data

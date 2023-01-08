@@ -17,7 +17,6 @@ tellraw @a "colors generated"
 
 bossbar set cam:prog name "resolving image"
 execute in cam:resolve run setblock 0 1 0 minecraft:oak_sign
-function cam:add_pixel
 function cam:resolve_data
 tellraw @a "data resolved"
 

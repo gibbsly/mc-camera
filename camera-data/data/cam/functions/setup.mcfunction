@@ -13,4 +13,4 @@ bossbar set cam:prog max 19612
 
 scoreboard players set feedback= cam.main 1
 scoreboard players set show_cashe= cam.main 0
-scoreboard players set particles= cam.main 0
+scoreboard players set particles= cam.main 1

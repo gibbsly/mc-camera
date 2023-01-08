@@ -1,0 +1,16 @@
+execute if predicate cam:light_00 run scoreboard players set light= cam.main 01
+execute if predicate cam:light_01 run scoreboard players set light= cam.main 02
+execute if predicate cam:light_02 run scoreboard players set light= cam.main 03
+execute if predicate cam:light_03 run scoreboard players set light= cam.main 04
+execute if predicate cam:light_04 run scoreboard players set light= cam.main 05
+execute if predicate cam:light_05 run scoreboard players set light= cam.main 06
+execute if predicate cam:light_06 run scoreboard players set light= cam.main 07
+execute if predicate cam:light_07 run scoreboard players set light= cam.main 08
+execute if predicate cam:light_08 run scoreboard players set light= cam.main 09
+execute if predicate cam:light_09 run scoreboard players set light= cam.main 10
+execute if predicate cam:light_10 run scoreboard players set light= cam.main 11
+execute if predicate cam:light_11 run scoreboard players set light= cam.main 12
+execute if predicate cam:light_12 run scoreboard players set light= cam.main 13
+execute if predicate cam:light_13 run scoreboard players set light= cam.main 14
+execute if predicate cam:light_14 run scoreboard players set light= cam.main 15
+execute if predicate cam:light_15 run scoreboard players set light= cam.main 16

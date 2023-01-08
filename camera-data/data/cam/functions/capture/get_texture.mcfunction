@@ -106,5 +106,10 @@ execute store result storage cam:main color.b int 0.01 run scoreboard players op
 ##applying water if set
 execute if score water= cam.main matches 1 run function cam:capture/apply_water
 
+#reducing color depth
+execute store result storage cam:main color.r int 4 run data get storage cam:main color.r 0.25
+execute store result storage cam:main color.g int 4 run data get storage cam:main color.g 0.25
+execute store result storage cam:main color.b int 4 run data get storage cam:main color.b 0.25
+
 #converting specified color values into rgb string
 data modify storage cam:main line append from storage cam:main color

@@ -12,7 +12,7 @@ execute store result score zpos= cam.main run data get storage cam:main pos[2] 6
 scoreboard players operation xpos= cam.main %= #64 cam.main
 scoreboard players operation ypos= cam.main %= #64 cam.main
 scoreboard players operation zpos= cam.main %= #64 cam.main
-execute positioned as 0-0-0-0-63616F run particle end_rod ~ ~0.1 ~
+#execute if score feedback= cam.main matches 1 if score particles= cam.main matches 1 positioned as 0-0-0-0-63616F run particle end_rod ~ ~0.1 ~
 
 #determining wface based on coordinate
 scoreboard players operation pwface= cam.main = wface= cam.main

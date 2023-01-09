@@ -1,0 +1,1 @@
+execute if score cas= cam.main matches 1.. run function cam:async

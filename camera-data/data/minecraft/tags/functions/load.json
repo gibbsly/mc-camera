@@ -1,6 +1,6 @@
 {
 	"values": [
-		"cam:setup",
+		"cam:load",
 		"suso.ray:load"
 	]
 }

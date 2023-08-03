@@ -1,60 +1,54 @@
-execute store result score r= cam.main run data get storage cam:main color.r
-execute store result score g= cam.main run data get storage cam:main color.g
-execute store result score b= cam.main run data get storage cam:main color.b
+execute store result score r= cam.main run data get storage cam:main color.r 10000
+execute store result score g= cam.main run data get storage cam:main color.g 10000
+execute store result score b= cam.main run data get storage cam:main color.b 10000
 
+scoreboard players operation r= cam.main /= #16 cam.main 
+scoreboard players operation g= cam.main /= #16 cam.main
+scoreboard players operation b= cam.main /= #16 cam.main
+
+# Red - 1-2 front digits - r1
 scoreboard players operation o= cam.main = r= cam.main
-execute if score o= cam.main matches 000..015 run function cam:capture/get_color/rgb/object_000
-execute if score o= cam.main matches 016..031 run function cam:capture/get_color/rgb/object_016
-execute if score o= cam.main matches 032..047 run function cam:capture/get_color/rgb/object_032
-execute if score o= cam.main matches 048..063 run function cam:capture/get_color/rgb/object_048
-execute if score o= cam.main matches 064..079 run function cam:capture/get_color/rgb/object_064
-execute if score o= cam.main matches 080..095 run function cam:capture/get_color/rgb/object_080
-execute if score o= cam.main matches 096..111 run function cam:capture/get_color/rgb/object_096
-execute if score o= cam.main matches 112..127 run function cam:capture/get_color/rgb/object_112
-execute if score o= cam.main matches 128..143 run function cam:capture/get_color/rgb/object_128
-execute if score o= cam.main matches 144..159 run function cam:capture/get_color/rgb/object_144
-execute if score o= cam.main matches 160..175 run function cam:capture/get_color/rgb/object_160
-execute if score o= cam.main matches 176..191 run function cam:capture/get_color/rgb/object_176
-execute if score o= cam.main matches 192..207 run function cam:capture/get_color/rgb/object_192
-execute if score o= cam.main matches 208..223 run function cam:capture/get_color/rgb/object_208
-execute if score o= cam.main matches 224..239 run function cam:capture/get_color/rgb/object_224
-execute if score o= cam.main matches 240..255 run function cam:capture/get_color/rgb/object_240
+execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
+data modify storage cam:temp output set value "r1"
+function cam:color/get_hex_char with storage cam:temp {}
 
+# Red last digits
+scoreboard players operation o= cam.main = r= cam.main
+scoreboard players operation o= cam.main %= #10000 cam.main
+scoreboard players operation o= cam.main *= #16 cam.main
+execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
+data modify storage cam:temp output set value "r2"
+function cam:color/get_hex_char with storage cam:temp {}
+
+# Green - 1-2 front digits - r1
 scoreboard players operation o= cam.main = g= cam.main
-execute if score o= cam.main matches 000..015 run function cam:capture/get_color/object_000
-execute if score o= cam.main matches 016..031 run function cam:capture/get_color/object_016
-execute if score o= cam.main matches 032..047 run function cam:capture/get_color/object_032
-execute if score o= cam.main matches 048..063 run function cam:capture/get_color/object_048
-execute if score o= cam.main matches 064..079 run function cam:capture/get_color/object_064
-execute if score o= cam.main matches 080..095 run function cam:capture/get_color/object_080
-execute if score o= cam.main matches 096..111 run function cam:capture/get_color/object_096
-execute if score o= cam.main matches 112..127 run function cam:capture/get_color/object_112
-execute if score o= cam.main matches 128..143 run function cam:capture/get_color/object_128
-execute if score o= cam.main matches 144..159 run function cam:capture/get_color/object_144
-execute if score o= cam.main matches 160..175 run function cam:capture/get_color/object_160
-execute if score o= cam.main matches 176..191 run function cam:capture/get_color/object_176
-execute if score o= cam.main matches 192..207 run function cam:capture/get_color/object_192
-execute if score o= cam.main matches 208..223 run function cam:capture/get_color/object_208
-execute if score o= cam.main matches 224..239 run function cam:capture/get_color/object_224
-execute if score o= cam.main matches 240..255 run function cam:capture/get_color/object_240
+execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
+data modify storage cam:temp output set value "g1"
+function cam:color/get_hex_char with storage cam:temp {}
 
+# Green last digits
+scoreboard players operation o= cam.main = g= cam.main
+scoreboard players operation o= cam.main %= #10000 cam.main
+scoreboard players operation o= cam.main *= #16 cam.main
+execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
+data modify storage cam:temp output set value "g2"
+function cam:color/get_hex_char with storage cam:temp {}
+
+# Blue - 1-2 front digits - r1
 scoreboard players operation o= cam.main = b= cam.main
-execute if score o= cam.main matches 000..015 run function cam:capture/get_color/object_000
-execute if score o= cam.main matches 016..031 run function cam:capture/get_color/object_016
-execute if score o= cam.main matches 032..047 run function cam:capture/get_color/object_032
-execute if score o= cam.main matches 048..063 run function cam:capture/get_color/object_048
-execute if score o= cam.main matches 064..079 run function cam:capture/get_color/object_064
-execute if score o= cam.main matches 080..095 run function cam:capture/get_color/object_080
-execute if score o= cam.main matches 096..111 run function cam:capture/get_color/object_096
-execute if score o= cam.main matches 112..127 run function cam:capture/get_color/object_112
-execute if score o= cam.main matches 128..143 run function cam:capture/get_color/object_128
-execute if score o= cam.main matches 144..159 run function cam:capture/get_color/object_144
-execute if score o= cam.main matches 160..175 run function cam:capture/get_color/object_160
-execute if score o= cam.main matches 176..191 run function cam:capture/get_color/object_176
-execute if score o= cam.main matches 192..207 run function cam:capture/get_color/object_192
-execute if score o= cam.main matches 208..223 run function cam:capture/get_color/object_208
-execute if score o= cam.main matches 224..239 run function cam:capture/get_color/object_224
-execute if score o= cam.main matches 240..255 run function cam:capture/get_color/object_240
+execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
+data modify storage cam:temp output set value "b1"
+function cam:color/get_hex_char with storage cam:temp {}
+
+# Blue last digits
+scoreboard players operation o= cam.main = b= cam.main
+scoreboard players operation o= cam.main %= #10000 cam.main
+scoreboard players operation o= cam.main *= #16 cam.main
+execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
+data modify storage cam:temp output set value "b2"
+function cam:color/get_hex_char with storage cam:temp {}
+
+function cam:color/concat_hex with storage cam:temp {}
 
 data modify storage cam:main line append from storage cam:temp rgb
 

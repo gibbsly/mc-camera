@@ -9,6 +9,8 @@ scoreboard players set #16 cam.main 16
 scoreboard players set #63 cam.main 63
 scoreboard players set #64 cam.main 64
 scoreboard players set #128 cam.main 128
+scoreboard players set #10000 cam.main 10000
+data modify storage cam:main hex_chars set value ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]
 bossbar add cam:prog ""
 bossbar set cam:prog max 19612
 

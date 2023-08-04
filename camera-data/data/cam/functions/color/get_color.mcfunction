@@ -1,53 +1,5 @@
-execute store result score r= cam.main run data get storage cam:main color.r 10000
-execute store result score g= cam.main run data get storage cam:main color.g 10000
-execute store result score b= cam.main run data get storage cam:main color.b 10000
-
-scoreboard players operation r= cam.main /= #16 cam.main 
-scoreboard players operation g= cam.main /= #16 cam.main
-scoreboard players operation b= cam.main /= #16 cam.main
-
-# Red - 1-2 front digits - r1
-scoreboard players operation o= cam.main = r= cam.main
-execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
-data modify storage cam:temp output set value "r1"
-function cam:color/get_hex_char with storage cam:temp {}
-
-# Red last digits
-scoreboard players operation o= cam.main = r= cam.main
-scoreboard players operation o= cam.main %= #10000 cam.main
-scoreboard players operation o= cam.main *= #16 cam.main
-execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
-data modify storage cam:temp output set value "r2"
-function cam:color/get_hex_char with storage cam:temp {}
-
-# Green - 1-2 front digits - r1
-scoreboard players operation o= cam.main = g= cam.main
-execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
-data modify storage cam:temp output set value "g1"
-function cam:color/get_hex_char with storage cam:temp {}
-
-# Green last digits
-scoreboard players operation o= cam.main = g= cam.main
-scoreboard players operation o= cam.main %= #10000 cam.main
-scoreboard players operation o= cam.main *= #16 cam.main
-execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
-data modify storage cam:temp output set value "g2"
-function cam:color/get_hex_char with storage cam:temp {}
-
-# Blue - 1-2 front digits - r1
-scoreboard players operation o= cam.main = b= cam.main
-execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
-data modify storage cam:temp output set value "b1"
-function cam:color/get_hex_char with storage cam:temp {}
-
-# Blue last digits
-scoreboard players operation o= cam.main = b= cam.main
-scoreboard players operation o= cam.main %= #10000 cam.main
-scoreboard players operation o= cam.main *= #16 cam.main
-execute store result storage cam:temp index int 0.0001 run scoreboard players get o= cam.main
-data modify storage cam:temp output set value "b2"
-function cam:color/get_hex_char with storage cam:temp {}
-
+# 0-255
+function cam:color/get_hex_char with storage cam:main color
 function cam:color/concat_hex with storage cam:temp {}
 
 data modify storage cam:main line append from storage cam:temp rgb

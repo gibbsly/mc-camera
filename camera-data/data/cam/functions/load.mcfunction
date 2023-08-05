@@ -19,5 +19,6 @@ scoreboard players set sg= cam.main 0
 scoreboard players set feedback= cam.main 1
 scoreboard players set show_cashe= cam.main 0
 scoreboard players set particles= cam.main 1
+scoreboard players set fov= cam.main 50
 
 gamerule maxCommandChainLength 2147483647

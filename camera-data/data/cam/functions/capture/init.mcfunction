@@ -1,5 +1,7 @@
-#moving plane entity
-execute rotated as 0-0-0-0-63616D positioned as 0-0-0-0-63616D run tp 0-0-0-0-63616E ^-0.495 ^-0.495 ^-0.5
+#setting up fov
+execute store result storage cam:temp fov double -0.01 run scoreboard players get fov= cam.main
+data modify storage cam:temp fov set string storage cam:temp fov 0 -1
+function cam:capture/place_plane with storage cam:temp {}
 
 #(last coordinate determines fov - 75 was old)
 

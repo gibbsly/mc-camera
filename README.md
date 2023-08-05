@@ -2,9 +2,7 @@
 A camera datapack, currently in development
 
 ## Installation 
-The datapack and resourcepack go in the usual places, the file `command_storage_rgb.dat` goes in the data folder of the world you have the datapack installed in, this is a required file.
-
-For this to function at all you need at least 8gb of ram allocated to minecraft, this is so the storage can be loaded. 
+The datapack and resourcepack go in the usual places, with [this](https://github.com/gibbsly/mc-camera/commit/d39dfd73eecfc90716dde52d0b53e360b98dbd6c) commit this now requires the use of snapshot [23w31a](https://www.minecraft.net/en-us/article/minecraft-snapshot-23w31a) due to the use of macros 
 
 ## Use
 

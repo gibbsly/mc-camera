@@ -98,7 +98,8 @@ execute if score v= cam.main matches 13 if data storage cam:temp uv[0] run data 
 execute if score v= cam.main matches 14 if data storage cam:temp uv[0] run data modify storage cam:main water_color set from storage cam:temp uv[14]
 execute if score v= cam.main matches 15 if data storage cam:temp uv[0] run data modify storage cam:main water_color set from storage cam:temp uv[15]
 
-data modify storage cam:main tint_color set value {r:63,g:118,b:228}
+function cam:capture/get_water_tint
+
 
 execute store result score tint= cam.main run data get storage cam:main tint_color.r
 execute store result score color= cam.main run data get storage cam:main water_color.r

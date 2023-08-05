@@ -3,10 +3,6 @@ bossbar set cam:prog name ""
 bossbar set cam:prog players @a
 tellraw @a "initialized"
 
-bossbar set cam:prog name "loading colors"
-data get storage rgb:rgb 1.1.1
-tellraw @a "colors loaded"
-
 bossbar set cam:prog name "capturing image"
 function cam:capture_data
 tellraw @a "data captured"
@@ -20,7 +16,7 @@ execute in cam:resolve run setblock 0 1 0 minecraft:oak_sign
 function cam:resolve_data
 tellraw @a "data resolved"
 
-execute in cam:resolve run data modify storage cam:main out set from block 0 1 0 Text1
+execute in cam:resolve run data modify storage cam:main out set from block 0 1 0 front_text.messages[0]
 execute in cam:resolve run setblock 0 1 0 minecraft:air
 #data modify block 0 1 0 Text1 set value '[{"text":",","font":"cam:main"},{"nbt":"out","storage":"cam:main","interpret":true}]'
 

@@ -1,1 +1,0 @@
-$data modify storage cam:temp line_char set from storage cam:main pixel_chars[$(line)]

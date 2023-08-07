@@ -4,7 +4,7 @@ execute if block ~ ~ ~ magenta_glazed_terracotta run function cam:capture/block/
 execute if block ~ ~ ~ magenta_stained_glass run function cam:capture/block/texture/magenta_stained_glass
 execute if block ~ ~ ~ magenta_terracotta run function cam:capture/block/texture/magenta_terracotta
 execute if block ~ ~ ~ magenta_wool run function cam:capture/block/texture/magenta_wool
-execute if block ~ ~ ~ magma_block run function cam:capture/block/texture/magma_block
+execute if block ~ ~ ~ magma_block run function cam:capture/block/texture/magma
 execute if block ~ ~ ~ mangrove_leaves run function cam:capture/block/texture/mangrove_leaves
 execute if block ~ ~ ~ mangrove_log run function cam:capture/block/texture/mangrove_log
 execute if block ~ ~ ~ mangrove_planks run function cam:capture/block/texture/mangrove_planks

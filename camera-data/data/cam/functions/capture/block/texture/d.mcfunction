@@ -1,7 +1,7 @@
 execute if block ~ ~ ~ dark_oak_leaves run function cam:capture/block/texture/dark_oak_leaves
 execute if block ~ ~ ~ dark_oak_log run function cam:capture/block/texture/dark_oak_log
 execute if block ~ ~ ~ dark_oak_planks run function cam:capture/block/texture/dark_oak_planks
-execute if block ~ ~ ~ dark_oak_wood run function cam:capture/block/texture/dark_oak_wood
+execute if block ~ ~ ~ dark_oak_wood run function cam:capture/block/texture/dark_oak_log
 execute if block ~ ~ ~ dark_prismarine run function cam:capture/block/texture/dark_prismarine
 execute if block ~ ~ ~ dead_brain_coral_block run function cam:capture/block/texture/dead_brain_coral_block
 execute if block ~ ~ ~ dead_bubble_coral_block run function cam:capture/block/texture/dead_bubble_coral_block

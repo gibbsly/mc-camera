@@ -1,4 +1,4 @@
-execute store result bossbar cam:prog value run scoreboard players add total= cam.main 1
+#execute store result bossbar cam:prog value run scoreboard players add total= cam.main 1
 #getting color
 data modify storage cam:main color set from storage cam:main colors[0][0]
 function cam:color/get_color

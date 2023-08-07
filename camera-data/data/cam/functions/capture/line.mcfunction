@@ -1,4 +1,4 @@
-execute store result bossbar cam:prog value run scoreboard players add total= cam.main 1
+#execute store result bossbar cam:prog value run scoreboard players add total= cam.main 1
 
 #capturing ray
 scoreboard players set dist= cam.main 0

@@ -1,7 +1,6 @@
 execute if block ~ ~ ~ calcite run function cam:capture/block/texture/calcite
-execute if block ~ ~ ~ cartography_table run function cam:capture/block/texture/cartography_table
-execute if block ~ ~ ~ carved_pumpkin run function cam:capture/block/texture/carved_pumpkin
-execute if block ~ ~ ~ chain_command_block run function cam:capture/block/texture/chain_command_block
+# 256 different combinations for this.. wtf mojang?
+execute if block ~ ~ ~ chiseled_bookshelf run function cam:capture/block/chiseled_bookshelf
 execute if block ~ ~ ~ chiseled_deepslate run function cam:capture/block/texture/chiseled_deepslate
 execute if block ~ ~ ~ chiseled_nether_bricks run function cam:capture/block/texture/chiseled_nether_bricks
 execute if block ~ ~ ~ chiseled_polished_blackstone run function cam:capture/block/texture/chiseled_polished_blackstone

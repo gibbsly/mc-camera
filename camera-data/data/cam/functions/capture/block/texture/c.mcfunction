@@ -24,7 +24,7 @@ execute if block ~ ~ ~ chiseled_nether_bricks run function cam:capture/block/tex
 execute if block ~ ~ ~ chiseled_polished_blackstone run function cam:capture/block/texture/chiseled_polished_blackstone
 execute if block ~ ~ ~ chiseled_quartz_block run function cam:capture/block/texture/chiseled_quartz_block
 execute if block ~ ~ ~ chiseled_red_sandstone run function cam:capture/block/texture/chiseled_red_sandstone
-execute if block ~ ~ ~ chiseled_sandstone run function cam:capture/block/multi_side {}
+execute if block ~ ~ ~ chiseled_sandstone run function cam:capture/block/texture/chiseled_sandstone
 execute if block ~ ~ ~ chiseled_stone_bricks run function cam:capture/block/texture/chiseled_stone_bricks
 execute if block ~ ~ ~ clay run function cam:capture/block/texture/clay
 execute if block ~ ~ ~ coal_block run function cam:capture/block/texture/coal_block

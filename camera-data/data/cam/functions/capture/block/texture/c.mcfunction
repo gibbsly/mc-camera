@@ -61,8 +61,8 @@ execute if block ~ ~ ~ crimson_stem[axis=y] run function cam:capture/block/multi
 execute if block ~ ~ ~ crimson_stem[axis=z] run function cam:capture/block/multi_side_log {"top":"crimson_stem_top","side":"crimson_stem","axis":"3"}
 execute if block ~ ~ ~ crying_obsidian run function cam:capture/block/texture/crying_obsidian
 execute if block ~ ~ ~ cut_copper run function cam:capture/block/texture/cut_copper
-execute if block ~ ~ ~ cut_red_sandstone run function cam:capture/block/multi_side {"top":"red_sandstone_top","bottom":"red_sandstone_top","north":"cut_red_sandstone_side","south":"cut_red_sandstone_side","east":"cut_red_sandstone_side","west":"cut_red_sandstone_side"}
-execute if block ~ ~ ~ cut_sandstone run function cam:capture/block/multi_side {"top":"sandstone_top","bottom":"sandstone_top","north":"cut_sandstone_side","south":"cut_sandstone_side","east":"cut_sandstone_side","west":"cut_sandstone_side"}
+execute if block ~ ~ ~ cut_red_sandstone run function cam:capture/block/multi_side {"top":"red_sandstone_top","bottom":"red_sandstone_top","north":"cut_red_sandstone","south":"cut_red_sandstone","east":"cut_red_sandstone","west":"cut_red_sandstone"}
+execute if block ~ ~ ~ cut_sandstone run function cam:capture/block/multi_side {"top":"sandstone_top","bottom":"sandstone_top","north":"cut_sandstone","south":"cut_sandstone","east":"cut_sandstone","west":"cut_sandstone"}
 execute if block ~ ~ ~ cyan_concrete run function cam:capture/block/texture/cyan_concrete
 execute if block ~ ~ ~ cyan_concrete_powder run function cam:capture/block/texture/cyan_concrete_powder
 execute if block ~ ~ ~ cyan_glazed_terracotta run function cam:capture/block/texture/cyan_glazed_terracotta

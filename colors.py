@@ -20,7 +20,7 @@ for img in all_images:
 				color_objects += [", "]
 		color_objects += ["]"]
 		color_objects = reduce(lambda x, y: f"{x}{y}" if x != "" else y, color_objects)
-		command = ("execute if score u= cam.main matches ",y," run data modify storage cam:temp uv set value ",color_objects)
+		command = ("execute if score v= cam.main matches ",y," run data modify storage cam:temp uv set value ",color_objects)
 		command = reduce(lambda x, y: f"{x}{y}" if x != "" else y, command)
 		with open(function_name, "a") as myfile:
 			myfile.write(str(command) + "\n")

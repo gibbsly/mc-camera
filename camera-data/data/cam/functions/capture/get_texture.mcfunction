@@ -55,7 +55,6 @@ execute if score face= cam.main matches 2 run scoreboard players remove u= cam.m
 execute if score face= cam.main matches 2 run scoreboard players operation u= cam.main *= #-1 cam.main
 execute if score face= cam.main matches 5 run scoreboard players remove u= cam.main 15
 execute if score face= cam.main matches 5 run scoreboard players operation u= cam.main *= #-1 cam.main
-scoreboard players operation v= cam.main >< u= cam.main
 
 #aplying mipmapping
 scoreboard players operation rd= cam.main /= #16 cam.main

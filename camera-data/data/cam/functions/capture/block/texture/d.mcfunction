@@ -31,7 +31,7 @@ execute if block ~ ~ ~ dispenser[facing=north] run function cam:capture/block/mu
 execute if block ~ ~ ~ dispenser[facing=south] run function cam:capture/block/multi_side {"top":"furnace_top","bottom":"furnace_top","side":"furnace_side","face":"dispenser","facing":"1"}
 execute if block ~ ~ ~ dispenser[facing=east] run function cam:capture/block/multi_side {"top":"furnace_top","bottom":"furnace_top","side":"furnace_side","face":"dispenser","facing":"2"}
 execute if block ~ ~ ~ dispenser[facing=west] run function cam:capture/block/multi_side {"top":"furnace_top","bottom":"furnace_top","side":"furnace_side","face":"dispenser","facing":"3"}
-execute if block ~ ~ ~ dried_kelp_block run function cam:capture/block/multi_side {"top":}
+#execute if block ~ ~ ~ dried_kelp_block run function cam:capture/block/multi_side {"top":}
 execute if block ~ ~ ~ dripstone_block run function cam:capture/block/texture/dripstone_block
 execute if block ~ ~ ~ dropper[facing=up] run function cam:capture/block/multi_side {"top":"dropper_vertical","bottom":"furnace_top","north":"furnace_side","south":"furnace_side","east":"furnace_side","west":"furnace_side"}
 execute if block ~ ~ ~ dropper[facing=down] run function cam:capture/block/multi_side {"top":"furnace_top","bottom":"dropper_vertical","north":"furnace_side","south":"furnace_side","east":"furnace_side","west":"furnace_side"}

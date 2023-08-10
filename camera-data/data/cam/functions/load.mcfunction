@@ -26,7 +26,7 @@ scoreboard players set show_cashe= cam.main 0
 scoreboard players set particles= cam.main 1
 scoreboard players set fov= cam.main 50
 scoreboard players set bitdepth= cam.main 16
-scoreboard players set fog_distance= cam.main 100
-scoreboard players set fog_atten= cam.main 64
+scoreboard players set fog_distance= cam.main 144
+scoreboard players set fog_atten= cam.main 16
 
 gamerule maxCommandChainLength 2147483647

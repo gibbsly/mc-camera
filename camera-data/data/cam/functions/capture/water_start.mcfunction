@@ -125,3 +125,5 @@ execute store result score color= cam.main run data get storage cam:main water_c
 execute store result storage cam:main water_color.g int 0.01 run scoreboard players operation color= cam.main *= darken= cam.main
 execute store result score color= cam.main run data get storage cam:main water_color.b
 execute store result storage cam:main water_color.b int 0.01 run scoreboard players operation color= cam.main *= darken= cam.main
+
+execute if score rd= cam.main >= fog_distance= cam.main run function cam:capture/apply_water_fog

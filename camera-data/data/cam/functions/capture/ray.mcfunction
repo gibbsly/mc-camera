@@ -1,7 +1,7 @@
 execute store result score rd= cam.main run scoreboard players add dist= cam.main 16
 
-execute if score water= cam.main matches 0 store result score nearby= cam.main if predicate cam:nearby
-execute if score water= cam.main matches 1 store result score nearby= cam.main if predicate cam:capture_nearby
+execute if score water= cam.main matches 0 positioned ^ ^ ^0.75 positioned ~-0.5 ~-0.5 ~-0.5 store result score nearby= cam.main if predicate cam:nearby
+execute if score water= cam.main matches 1 positioned ^ ^ ^0.75 positioned ~-0.5 ~-0.5 ~-0.5 store result score nearby= cam.main if predicate cam:capture_nearby
 
 execute if score nearby= cam.main matches 1 run function cam:capture/hd_ray
 

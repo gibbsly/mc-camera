@@ -1,0 +1,1 @@
+$data modify storage cam:main color set from storage cam:temp uv[$(u)]

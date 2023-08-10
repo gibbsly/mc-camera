@@ -110,4 +110,7 @@ execute store result storage cam:main color.b int 0.01 run scoreboard players op
 ##applying water if set
 execute if score water= cam.main matches 1 run function cam:capture/apply_water
 
+#applying fog
+execute if score rd= cam.main >= fog_distance= cam.main run function cam:capture/apply_fog
+
 #data modify storage cam:main line append from storage cam:main color

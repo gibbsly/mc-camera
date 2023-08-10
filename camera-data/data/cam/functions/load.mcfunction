@@ -9,6 +9,7 @@ scoreboard players set #8 cam.main 8
 scoreboard players set #10 cam.main 10
 scoreboard players set #12 cam.main 12
 scoreboard players set #16 cam.main 16
+scoreboard players set #32 cam.main 32
 scoreboard players set #63 cam.main 63
 scoreboard players set #64 cam.main 64
 scoreboard players set #128 cam.main 128
@@ -25,5 +26,7 @@ scoreboard players set show_cashe= cam.main 0
 scoreboard players set particles= cam.main 1
 scoreboard players set fov= cam.main 50
 scoreboard players set bitdepth= cam.main 16
+scoreboard players set fog_distance= cam.main 100
+scoreboard players set fog_atten= cam.main 64
 
 gamerule maxCommandChainLength 2147483647

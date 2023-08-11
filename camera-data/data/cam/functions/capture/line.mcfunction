@@ -4,7 +4,7 @@
 scoreboard players set dist= cam.main 0
 scoreboard players set water= cam.main 0
 scoreboard players set captured= cam.main 0
-execute at 0-0-0-0-63616E facing entity 0-0-0-0-63616D feet positioned ^ ^ ^1 run function cam:capture/ray
+execute at 0-0-0-0-63616E facing entity 0-0-0-0-63616D feet positioned as 0-0-0-0-63616D run function cam:capture/ray
 
 #loop
 scoreboard players add rays= cam.main 1
